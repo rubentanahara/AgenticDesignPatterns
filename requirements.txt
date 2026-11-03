@@ -1,0 +1,9 @@
+langchain-core
+langchain-google-genai
+langgraph
+google-adk[mcp,a2a]
+pydantic
+numpy
+uvicorn
+rich
+ruff

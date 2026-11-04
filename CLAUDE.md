@@ -38,4 +38,4 @@ PYTHONPATH=. python 01-prompt-chaining/chain.py   # equivalent
 
 - Don't commit `__pycache__`, `.DS_Store`, venvs, secrets (root `.gitignore` covers them).
 - Python files carry no explanatory comments (stripped repo-wide). Don't add new ones.
-- Code is Apache-2.0 (`LICENSE`). The book is copyrighted and gitignored (`AgenticDesignPatternsBook.md`); never commit it or long excerpts from it.
+- Code is MIT (`LICENSE`). The book is copyrighted and gitignored (`AgenticDesignPatternsBook.md`); never commit it or long excerpts from it.

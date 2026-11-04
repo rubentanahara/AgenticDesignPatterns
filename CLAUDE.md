@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Runnable examples for the 21 chapters + appendices of *Agentic Design Patterns* (book not in repo: copyrighted, gitignored as `AgenticDesignPatternsBook.md`). One folder per chapter (`NN-name/`), each with `README.md` (pattern summary, non-obvious details) and standalone scripts. One root `requirements.txt` covers every chapter. Root `README.md` has the chapter index. Stack: Google ADK (`*_adk.py`) and LangChain/LangGraph on Gemini. Chapters often pair a LangChain script with an ADK script showing the same pattern.
+Runnable examples for the 21 chapters + appendices of *Agentic Design Patterns* (the book is copyrighted and not in the repo). One folder per chapter (`NN-name/`), each with `README.md` (pattern summary, non-obvious details) and standalone scripts. One root `requirements.txt` covers every chapter. Root `README.md` has the chapter index. Stack: Google ADK (`*_adk.py`) and LangChain/LangGraph on Gemini. Chapters often pair a LangChain script with an ADK script showing the same pattern.
 
 ## Commands
 
@@ -38,4 +38,4 @@ PYTHONPATH=. python 01-prompt-chaining/chain.py   # equivalent
 
 - Don't commit `__pycache__`, `.DS_Store`, venvs, secrets (root `.gitignore` covers them).
 - Python files carry no explanatory comments (stripped repo-wide). Don't add new ones.
-- Code is MIT (`LICENSE`). The book is copyrighted and gitignored (`AgenticDesignPatternsBook.md`); never commit it or long excerpts from it.
+- Code is MIT (`LICENSE`). Never commit the book or long excerpts from it.

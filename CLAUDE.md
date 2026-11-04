@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Runnable examples for the 21 chapters + appendices of *Agentic Design Patterns* (`AgenticDesignPatternsBook.md`, ~800K, don't read whole). One folder per chapter (`NN-name/`), each with `README.md` (pattern summary, non-obvious details), `requirements.txt`, and standalone scripts. Root `README.md` has the chapter index. Stack: Google ADK (`*_adk.py`) and LangChain/LangGraph on Gemini. Chapters often pair a LangChain script with an ADK script showing the same pattern.
+Runnable examples for the 21 chapters + appendices of *Agentic Design Patterns* (book not in repo: copyrighted, gitignored as `AgenticDesignPatternsBook.md`). One folder per chapter (`NN-name/`), each with `README.md` (pattern summary, non-obvious details) and standalone scripts. One root `requirements.txt` covers every chapter. Root `README.md` has the chapter index. Stack: Google ADK (`*_adk.py`) and LangChain/LangGraph on Gemini. Chapters often pair a LangChain script with an ADK script showing the same pattern.
 
 ## Commands
 
-No build, lint, or test suite. Scripts are run directly; a Pyright config exists (`pyrightconfig.json`, venv `~/.venvs/adp`).
+No build or test suite. CI (`.github/workflows/offline-checks.yml`) runs `compileall` plus the offline scripts below on push/PR; `.github/dependabot.yml` bumps pip and Actions weekly. Scripts are run directly; a Pyright config exists (`pyrightconfig.json`, venv `~/.venvs/adp`).
 
 ```bash
 make run CH=02 FILE=router.py   # FILE optional if chapter has one script
@@ -37,4 +37,5 @@ PYTHONPATH=. python 01-prompt-chaining/chain.py   # equivalent
 ## Conventions
 
 - Don't commit `__pycache__`, `.DS_Store`, venvs, secrets (root `.gitignore` covers them).
-- Existing Python files carry per-line explanatory comments (commit `418ff74`). Leave them in place when editing.
+- Python files carry no explanatory comments (stripped repo-wide). Don't add new ones.
+- Code is Apache-2.0 (`LICENSE`). The book is copyrighted and gitignored (`AgenticDesignPatternsBook.md`); never commit it or long excerpts from it.

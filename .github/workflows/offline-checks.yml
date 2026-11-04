@@ -1,0 +1,23 @@
+name: offline-checks
+on:
+  push:
+  pull_request:
+jobs:
+  offline-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m compileall -q .
+      - run: python 08-memory-management/state_scopes_adk.py
+        env:
+          PYTHONPATH: .
+      - run: python 10-model-context-protocol/discover.py
+        env:
+          PYTHONPATH: .
+      - run: python 19-evaluation-and-monitoring/trajectory_metrics.py
+        env:
+          PYTHONPATH: .

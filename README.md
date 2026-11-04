@@ -1,6 +1,6 @@
 # Agentic Design Patterns: Study Notes
 
-Notes and runnable code for Antonio Gulli's *Agentic Design Patterns* (source: `../AgenticDesignPatternsBook.md`). There is one folder per chapter. Each `README.md` has: summary, problem and when to use it, key takeaways, non-obvious details, and a worked example that points to the code.
+Notes and runnable code for Antonio Gulli's *Agentic Design Patterns* (the book itself is not included: it is copyrighted, buy it from the publisher). There is one folder per chapter. Each `README.md` has: summary, problem and when to use it, key takeaways, non-obvious details, and a worked example that points to the code.
 
 | # | Chapter | One-line takeaway |
 |---|---------|-------------------|
